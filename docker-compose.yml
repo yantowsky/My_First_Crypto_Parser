@@ -1,0 +1,9 @@
+services:
+  my-first-crypto-parser:
+    build: .
+    container_name: my-first-crypto-parser
+    restart: always
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data

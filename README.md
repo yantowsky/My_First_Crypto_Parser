@@ -8,24 +8,6 @@
 - State зберігається локально
 - Алерт ТІЛЬКИ на NEW, не на кожен цикл
 
-Структура проєкту
-
-`My_First_Crypto_Parser/
-├── app/
-│   ├── __init__.py
-│   ├── config.py
-│   ├── client.py
-│   ├── parser.py
-│   ├── state.py
-│   ├── notifier.py
-│   └── service.py
-├── data/
-│   └── state.json          # створюється/оновлюється під час роботи (persist між перезапусками Docker)
-├── main.py
-├── requirements.txt
-├── Dockerfile
-└── docker-compose.yml`
-
 ✅ OnChain-ready сервіс  
 ✅ FAST/NORMAL режим  
 ✅ не пропускає нові продукти  

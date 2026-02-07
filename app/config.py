@@ -20,6 +20,14 @@ if COINS_WHITELIST.strip():
 else:
     COINS_WHITELIST = []
 
+# Exchanges (comma-separated). Default keeps current behavior (Bybit only).
+EXCHANGES = os.getenv("EXCHANGES", "bybit")
+EXCHANGES = [e.strip().lower() for e in EXCHANGES.split(",") if e.strip()]
+
+# Optional creds (needed only for some exchanges, e.g. Binance Simple Earn is signed USER_DATA)
+BINANCE_API_KEY = os.getenv("BINANCE_API_KEY")
+BINANCE_API_SECRET = os.getenv("BINANCE_API_SECRET")
+
 # Telegram
 TELEGRAM_ENABLED = os.getenv("TELEGRAM_ENABLED", "False").lower() == "true"
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
